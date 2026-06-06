@@ -5,13 +5,13 @@ theme:
   palette:
 
     - scheme: default
-      primary: indigo
+      primary: blue
       toggle:
         icon: material/weather-night
         name: Dark mode
 
     - scheme: slate
-      primary: indigo
+      primary: deep blue
       toggle:
         icon: material/weather-sunny
         name: Light mode
