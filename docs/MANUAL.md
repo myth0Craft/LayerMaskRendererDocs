@@ -18,7 +18,7 @@ Frames may take longer or shorter to render depending on the complexity of the s
 
 - **The #1 way to boost the performance of the render feature is by enabling Downscaling.** To change the Downscaling value, go to the render feature's settings and edit the Downscaling field. For large performance gains with minimal visual change, set Downscaling to 2x. Values larger than 2x may cause negative visual effects, though performance will improve dramatically with each downscaling increase.
 
-<img width="438" height="258" alt="Screenshot 2026-06-06 114912" src="https://github.com/user-attachments/assets/7acbe9f7-0cbe-450c-b9e5-e30cb59d6f5c" />
+![Downscaling Slider](images/downscaling_slider.png)
 
 
 
@@ -39,12 +39,12 @@ The shader must be set up using the URP fullscreen shader format. Only URP-compa
 1. Right click the project window.
 2. Create -> Shader Graph -> URP -> Fullscreen Shader Graph
 
-<img width="1016" height="600" alt="Screenshot 2026-06-04 172218" src="https://github.com/user-attachments/assets/c12e117b-5ab8-4808-bef5-df4b0e8d1aa3" />
+![Create Fullscreen Shader Graph](images/creating_fullscreen_shader_graph.png)
 
 ### To change an existing shader graph to this format:
 1. In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.
 
-<img width="389" height="557" alt="Screenshot 2026-06-05 084721" src="https://github.com/user-attachments/assets/5915ea04-84b9-40a7-b9cc-fba1e76e6a09" />
+![Change Existing Shader Graph Format](images/change_existing_shader_to_fullscreen.png)
 
 ## Blend Mode
 
@@ -54,7 +54,7 @@ However, the **Alpha** blend mode is recommended. This allows the selected layer
 
 To change a shader graph's blend mode, go the the Graph Inspector, find the Universal dropdown under Graph Settings, and find the Blend Mode dropdown. Change this to whatever blend mode is desired.
 
-<img width="386" height="564" alt="Screenshot 2026-06-05 085500" src="https://github.com/user-attachments/assets/35a2d058-3488-41e5-9b80-e1be2ff62134" />
+![Change Shader Graph Blend Mode](images/change_shader_graph_blend_mode.png)
 
 ## Reading the texture
 
@@ -66,11 +66,11 @@ To create the _BlitTexture field in Shader Graph:
 
 1. Go to the window containing the Shader Graph's variables. Click the "+" button. Select Texture2D.
 
-<img width="362" height="454" alt="Screenshot 2026-06-05 090336" src="https://github.com/user-attachments/assets/89e65535-a596-47e7-8816-b2735f377e57" />
+![Add Texture2D Node](images/create_texture_2d.png)
 
 2. Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.
 
-<img width="382" height="565" alt="Screenshot 2026-06-05 090459" src="https://github.com/user-attachments/assets/7cf5b4e9-fee6-46a3-81ac-bcb4c1a3902d" />
+![Blit Texture Node Settings](images/blit_texture_node_settings.png)
 
 3. To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.
 
